@@ -1,3 +1,4 @@
+import 'package:compass_genkit/dreaming/dreaming.dart';
 import 'package:compass_genkit/extensions/build_context_extension.dart';
 import 'package:compass_genkit/trips/ai/providers/image_provider.dart';
 import 'package:compass_genkit/trips/ai/screens/ai_itinerary_screen.dart';
@@ -69,12 +70,12 @@ class _AiPlanMyTripScreenState extends ConsumerState<AiPlanMyTripScreen> {
                   child: CommonButton(
                     buttonText: 'Plan My Trip',
                     onPressed: () async {
-                      await ref
-                          .read(itineraryProvider.notifier)
-                          .getItineraries(request: _queryController.text)
-                          .then(((value) {
-                        context.navigateToScreen(const AiItineraryScreen());
-                      }));
+                      if (_queryController.text.isNotEmpty) {
+                        context.navigateToScreen(
+                            DreamingScreen(queryText: _queryController.text));
+                      } else {
+                        return;
+                      }
                     },
                     buttonColor: purpleColour,
                   ),

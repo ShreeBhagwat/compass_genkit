@@ -1,3 +1,4 @@
+import 'dart:developer';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -17,7 +18,6 @@ class ItineraryController {
     required this.error,
     required this.isError,
   });
-
 
   ItineraryController copyWith({
     bool? isLoading,
@@ -65,6 +65,7 @@ class ItineraryProvider extends StateNotifier<ItineraryController> {
 
       state = state.copyWith(itineraries: resonse);
     } catch (e) {
+      log(e.toString());
       await getFallbackItineraries();
     } finally {
       setLoading(false);

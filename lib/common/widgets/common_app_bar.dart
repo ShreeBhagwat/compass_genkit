@@ -4,13 +4,16 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CommonAppBar({
     super.key,
     this.showHomeButton = true,
+    this.isTransparent = false,
   });
 
   final bool showHomeButton;
+  final bool isTransparent;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: isTransparent ? Colors.transparent : null,
       leading: const Padding(
         padding: EdgeInsets.all(8.0),
         child: Image(

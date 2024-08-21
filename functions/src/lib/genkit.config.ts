@@ -21,7 +21,7 @@ import { vertexAI } from '@genkit-ai/vertexai';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    projectId: 'compass-genkit',
+    projectId: 'ADD Your Project ID here',
 };
 
 export const getProjectId = () => {

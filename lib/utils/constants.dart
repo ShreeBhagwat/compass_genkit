@@ -9,4 +9,4 @@ List<Color> brandGradientColorList = const [
 ];
 
 
- const itineraryFlowFunctionName = 'itineraryFlow';
+ const itineraryFlowFunctionName = 'dreamTripFlow';

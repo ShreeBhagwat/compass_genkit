@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "30343830559",
+    "project_id": "compass-genkit",
+    "storage_bucket": "compass-genkit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30343830559:android:dfd61a2b35be5603b8892a",
+        "android_client_info": {
+          "package_name": "com.example.compass_genkit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwOhOt1Wlmlbtj6gA_O5_serQOyOnMMpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

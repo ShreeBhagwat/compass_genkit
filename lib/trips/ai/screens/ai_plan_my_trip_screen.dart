@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../common/widgets/common_app_bar.dart';
 import '../../../common/widgets/common_button.dart';
+import '../../../common/widgets/gradient_title.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/image_handling.dart';
 import '../providers/itinerary_provider.dart';
@@ -34,7 +35,7 @@ class _AiPlanMyTripScreenState extends ConsumerState<AiPlanMyTripScreen> {
           children: [
             Column(
               children: [
-                const Text(
+                const GradientTitle(
                   'Dream Your Vacation',
                 ),
                 Card(

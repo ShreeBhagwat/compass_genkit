@@ -1,5 +1,5 @@
-
 import 'package:compass_genkit/extensions/build_context_extension.dart';
+import 'package:compass_genkit/trips/ai/providers/image_provider.dart';
 import 'package:compass_genkit/trips/ai/screens/ai_itinerary_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -98,5 +98,6 @@ class _AiPlanMyTripScreenState extends ConsumerState<AiPlanMyTripScreen> {
     setState(() {
       selectedImages = images;
     });
+    ref.read(imageUploadProvider.notifier).addImages(images);
   }
 }

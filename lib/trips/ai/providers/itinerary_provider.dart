@@ -56,12 +56,12 @@ class ItineraryProvider extends StateNotifier<ItineraryController> {
     state = state.copyWith(isError: isError);
   }
 
-  Future getItineraries({required String request, String? imageUrl}) async {
+  Future getItineraries({required String request}) async {
     setLoading(true);
     try {
       final resonse = await ref
           .read(firebaseFunctionRepoProvider)
-          .generateItineraryFlow(request: request, imageUrl: imageUrl);
+          .generateItineraryFlow(request: request);
 
       state = state.copyWith(itineraries: resonse);
     } catch (e) {

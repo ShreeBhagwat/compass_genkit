@@ -17,8 +17,7 @@ class AiItineraryScreen extends ConsumerStatefulWidget {
 class _AiItineraryScreenState extends ConsumerState<AiItineraryScreen> {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
+
     final itineraryNotifier = ref.read(itineraryProvider);
     return Scaffold(
       appBar: const CommonAppBar(

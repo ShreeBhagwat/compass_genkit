@@ -8,8 +8,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 
-var imageResourceEndpoint = 'uploadimgtrip-hovwuqnpzq-uc.a.run.app';
-var imageMimeTypeResourceEndpoint = 'us-central1-yt-rag.cloudfunctions.net';
+
 
 class UserSelectedImage {
   String path;

@@ -14,6 +14,7 @@ import vertexAI, { gemini15Flash } from "@genkit-ai/vertexai";
 // Cloud Functions.
 import { noAuth, onFlow } from "@genkit-ai/firebase/functions";
 import { dotprompt } from "@genkit-ai/dotprompt";
+import { itineraryFlow } from "./lib/itineraryFlow";
 
 
 configureGenkit({
@@ -57,7 +58,6 @@ export const menuSuggestionFlow = onFlow(
 );
 
 import './lib/placesRetriever';
-import './lib/itineraryFlow';
-
+export const dreamTripFlow = itineraryFlow;
 
 

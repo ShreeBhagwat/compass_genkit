@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBPBSkX8LGrTyoShy-wEtiGqdu6MERUc2o</string>
+	<string>AIzaSyD96UWtSdEH6qKLdBlLpCA1ApqKpwG9IXw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>30343830559</string>
+	<string>983180686249</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.compassGenkit</string>
 	<key>PROJECT_ID</key>
-	<string>compass-genkit</string>
+	<string>genkit-compass-app</string>
 	<key>STORAGE_BUCKET</key>
-	<string>compass-genkit.appspot.com</string>
+	<string>genkit-compass-app.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:30343830559:ios:47a0da550f4359e8b8892a</string>
+	<string>1:983180686249:ios:2de41503ea5c6a993b8ab8</string>
 </dict>
 </plist>

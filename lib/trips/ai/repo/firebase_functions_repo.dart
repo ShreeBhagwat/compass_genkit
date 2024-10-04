@@ -16,22 +16,21 @@ class FirebaseFunctionsRepo {
 
   Future<List<ItineraryModel>> generateItineraryFlow(
       {required String request}) async {
-    return Future.error('Not implemented');
-    // try {
-    //   final imageUrls = await uploadToImageToFirestore();
-    //   final resonse = await _firebaseFunctions
-    //       .httpsCallable(itineraryFlowFunctionName)
-    //       .call({'request': request, 'imageUrl': imageUrls});
-    //   final List<ItineraryModel> list =
-    //       ItineraryModel.fromJsonList(resonse.data);
-    //   return list;
-    // } on FirebaseFunctionsException catch (e) {
-    //   log(e.toString());
-    //   return Future.error((e));
-    // } catch (e) {
-    //   log(e.toString());
-    //   return Future.error((e));
-    // }
+    try {
+      final imageUrls = await uploadToImageToFirestore();
+      final resonse = await _firebaseFunctions
+          .httpsCallable(itineraryFlowFunctionName)
+          .call({'request': request, 'imageUrl': imageUrls});
+      final List<ItineraryModel> list =
+          ItineraryModel.fromJsonList(resonse.data);
+      return list;
+    } on FirebaseFunctionsException catch (e) {
+      log(e.toString());
+      return Future.error((e));
+    } catch (e) {
+      log(e.toString());
+      return Future.error((e));
+    }
   }
 
   Future<List<String>> uploadToImageToFirestore() async {
